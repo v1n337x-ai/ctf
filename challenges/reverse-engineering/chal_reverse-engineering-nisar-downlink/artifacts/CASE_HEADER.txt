@@ -1,0 +1,8 @@
+SIM/2026/04 -- ACT IV -- 22
+"NISAR Downlink"
+
+Every station boots stage one; stage one refuses a stage two it cannot
+verify. Read the check twice: the signature binds the slot *index*,
+and the slot index is the operator's choice.
+
+Boot the slot that was never rotated out.

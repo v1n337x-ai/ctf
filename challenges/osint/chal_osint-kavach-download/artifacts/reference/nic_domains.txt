@@ -1,0 +1,7 @@
+# registered government domains (extract)
+nic.gov.in
+nic.in
+digitalindia.gov.in
+meity.gov.in
+indiacode.nic.in
+ncs.gov.in

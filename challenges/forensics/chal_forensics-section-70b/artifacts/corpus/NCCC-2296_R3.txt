@@ -1,0 +1,19 @@
+id: NCCC-2296/R3
+scheme: nccc
+date: 2026-04-16
+title: Metadata collection scope, quarterly
+office: PRITHVI-OPS
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+Revision 3 of 4.
+Supersedes revision 2.
+
+Operator name as recorded by the source office, carried forward from the superseded revision:
+  operator codename: SANDVIPER
+
+references:
+  - PRITHVI/REV/2026/0142
+  - S70B/ANNEX/07

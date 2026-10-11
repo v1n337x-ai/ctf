@@ -1,0 +1,13 @@
+{
+  "act": "IV",
+  "category": "Reverse Engineering",
+  "difficulty": "Hard",
+  "flag_policy": {
+    "per_instance": false,
+    "regex": "^[A-Za-z0-9]+$",
+    "sealed_outside_player_tree": true
+  },
+  "id": "SIM-21",
+  "name": "BYOVD",
+  "type": "STATIC"
+}

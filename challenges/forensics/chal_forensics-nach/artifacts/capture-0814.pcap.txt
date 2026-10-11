@@ -1,0 +1,17 @@
+# capture 2026-08-14, substation NACH estate
+2026-08-14T01:00:11Z  sshd[900]: Accepted publickey for sandvip@operations from 10.4.9.6 port 41000
+2026-08-14T02:01:11Z  sshd[901]: Accepted publickey for sandvip@operations from 10.4.7.31 port 41001
+2026-08-14T03:02:11Z  sshd[902]: Accepted publickey for sandvip@operations from 10.4.7.11 port 41002
+2026-08-14T01:03:11Z  sshd[903]: Accepted publickey for sandvip@operations from 10.4.7.11 port 41003
+2026-08-14T02:04:11Z  sshd[904]: Accepted publickey for sandvip@operations from 10.4.9.6 port 41004
+2026-08-14T03:05:11Z  sshd[905]: Accepted publickey for sandvip@operations from 10.4.7.12 port 41005
+2026-08-14T01:06:11Z  sshd[906]: Accepted publickey for sandvip@operations from 10.4.9.6 port 41006
+2026-08-14T02:07:11Z  sshd[907]: Accepted publickey for sandvip@operations from 10.4.9.6 port 41007
+2026-08-14T03:08:11Z  sshd[908]: Accepted publickey for sandvip@operations from 10.4.9.6 port 41008
+2026-08-14T01:09:11Z  sshd[909]: Accepted publickey for sandvip@operations from 10.4.7.11 port 41009
+2026-08-14T02:10:11Z  sshd[910]: Accepted publickey for sandvip@operations from 10.4.7.11 port 41010
+2026-08-14T03:11:11Z  sshd[911]: Accepted publickey for sandvip@operations from 10.4.7.31 port 41011
+2026-08-14T01:12:11Z  sshd[912]: Accepted publickey for sandvip@operations from 10.4.7.11 port 41012
+2026-08-14T02:13:11Z  sshd[913]: Accepted publickey for sandvip@operations from 10.4.7.11 port 41013
+2026-08-14T03:41:07Z  sudo:  operations : TTY=pts/2 ; PWD=/home/operations ; USER=root ; COMMAND=/usr/bin/tee /srv/procure/ledger.csv
+2026-08-14T03:41:09Z  sealed-edge: ops@edge: GbMaCUcQccvQqUcvwxLw9a8hzsk=

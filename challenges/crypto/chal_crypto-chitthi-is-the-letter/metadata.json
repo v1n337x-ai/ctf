@@ -1,0 +1,13 @@
+{
+  "act": "III",
+  "category": "Crypto",
+  "difficulty": "Easy",
+  "flag_policy": {
+    "per_instance": false,
+    "regex": "^[A-Za-z0-9]+$",
+    "sealed_outside_player_tree": true
+  },
+  "id": "SIM-13",
+  "name": "Chitthi Is The Letter",
+  "type": "STATIC"
+}

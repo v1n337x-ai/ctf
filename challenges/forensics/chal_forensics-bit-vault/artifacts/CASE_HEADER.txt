@@ -1,0 +1,12 @@
+SIM/2026/07 -- ACT II -- 16
+"Bit Vault"
+
+A hardware logger was pulled from a decommissioned unit. It wrote its output
+as a stream of 9-bit words packed into bytes, and the vendor's word reference
+for that encoding was kept with the unit.
+
+capture/word_stream.bin   the raw word stream
+WORD_REF.txt              the vendor's published word reference
+
+Answer the operator's question:
+  What did the logger record?

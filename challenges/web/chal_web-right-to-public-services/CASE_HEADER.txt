@@ -1,0 +1,19 @@
+SIM-09 -- Right to Public Services
+Act II / Web / Medium
+
+A grievance portal where anyone uploads a photograph of a broken
+water pipe. Uploads are stored, and stored things have to be rendered
+somewhere. The portal is ancient.
+
+OBJECTIVE
+
+Get code execution through the upload path.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8080/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

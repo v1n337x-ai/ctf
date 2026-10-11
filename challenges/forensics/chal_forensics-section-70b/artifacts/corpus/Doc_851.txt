@@ -1,0 +1,14 @@
+id: Doc 851
+scheme: flat
+date: 2026-06-04
+title: Vendor onboarding checklist, region 811
+office: NCCC
+asset_class: ASSETCLASS-C
+reachable_without_login: NO
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - NCCC-2701/R1

@@ -1,0 +1,30 @@
+GOVERNMENT e-MARKETPLACE / GeM
+BID NO. GEM/2026/B/4471021
+Subject: Procurement of Smart Meter Firmware - National Rollout
+
+CORRIGENDUM NO. II
+Issued: 2026-06-19
+
+1.0  Scope
+  Supply, signing and field rollout of smart meter firmware across
+  all divisions, including the metering stack and key provisioning.
+
+2.0  Annexures
+  Amends: GEM/2026/B/4471021, Revision 04
+
+With reference to Annexure-C, the asset nomenclature table is reinstated.
+
+ANNEXURE-C (SUMMARY) -- ASSET NOMENCLATURE (INTERNAL)
+  Firmware build channel : ppg-fw-build-nightly
+  Convention             : asset codes are of the form
+                           PRITHVI / <bay> - <voltage in kV>KV / <IED unit>
+
+The full commissioned list is unchanged from Revision 01 and is
+incorporated by reference. Examples carried forward:
+
+asset_code                                   commissioned / remark
+------------------------------------------   ---------------------------
+PRG/B07-400KV/IED-A                          S Main transformer #2 bay, commissioned 2020-03
+PRG/B12-765KV/IED-C                          306e6574656e6465727468726565726576697369306e73
+
+-- end of corrigendum --

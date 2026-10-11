@@ -1,0 +1,14 @@
+id: NCCC-2501/R2
+scheme: nccc
+date: 2026-02-21
+title: Vendor onboarding checklist, region 301
+office: PRWC
+asset_class: ASSETCLASS-B
+reachable_without_login: YES
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - PRITHVI/REV/2026/0142

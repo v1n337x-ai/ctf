@@ -1,0 +1,13 @@
+{
+  "act": "I",
+  "category": "OSINT",
+  "difficulty": "Medium",
+  "flag_policy": {
+    "per_instance": false,
+    "regex": "^[A-Za-z0-9]+$",
+    "sealed_outside_player_tree": true
+  },
+  "id": "SIM-03",
+  "name": "NICeMail, 06:14",
+  "type": "STATIC"
+}

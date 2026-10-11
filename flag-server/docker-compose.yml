@@ -1,0 +1,46 @@
+# VEC flag server -- portable deployment.
+#
+#   docker compose up -d --build
+#   ./run.sh tunnel          # or: ngrok http 8099
+#
+# State lives in a named volume so a restart keeps the issued register
+# tokens and the per-challenge secrets.
+services:
+  flagserver:
+    build: .
+    image: vec/flagserver:portable
+    container_name: vec-flagserver
+    restart: unless-stopped
+    environment:
+      # One entry per challenge the server will serve, comma separated.
+      VEC_CHALLENGES: "${VEC_CHALLENGES}"
+      # The per-challenge register tokens already baked into the shipped
+      # player bundles. Seeded from .env so the server accepts exactly what
+      # players hold. Without these the server would mint its own and every
+      # bundle would 401 at /register.
+      VEC_REGISTER_TOKENS: "${VEC_REGISTER_TOKENS}"
+      # 50 players on one venue NAT share an address; the default is sized
+      # for that, and is still a ceiling against a single host hammering it.
+      VEC_RATE_MAX: "${VEC_RATE_MAX:-6000}"
+      # Tokens are seeded above, so this stays 0: the server refuses to start
+      # rather than silently inventing tokens that break shipped handouts.
+      VEC_ALLOW_EMPTY_TOKENS: "${VEC_ALLOW_EMPTY_TOKENS:-0}"
+      # Uncomment to expose the challenge list on /api/v1/challenges.
+      # VEC_DEBUG: "1"
+    volumes:
+      # Named explicitly, and matching the name the runbook and run.sh use.
+      # This volume holds every in-flight player's objective value plus the
+      # register tokens; deleting it invalidates every player mid-solve.
+      - vec-flagstate:/state
+    ports:
+      # Host side is 8100, not 8099: a different, unrelated flag server
+      # already holds 8099 on this machine. Container side stays 8099, which
+      # is what the Dockerfile exposes and what the healthcheck probes.
+      #
+      # Loopback only, on purpose. This endpoint hands out every flag, so it
+      # must never be reachable from the LAN -- reach it via the tunnel.
+      - "127.0.0.1:8100:8099"
+
+volumes:
+  vec-flagstate:
+    name: vec-flagstate

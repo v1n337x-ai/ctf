@@ -1,0 +1,13 @@
+{
+  "act": "II",
+  "category": "Reverse Engineering",
+  "difficulty": "Hard",
+  "flag_policy": {
+    "per_instance": false,
+    "regex": "^[A-Za-z0-9]+$",
+    "sealed_outside_player_tree": true
+  },
+  "id": "SIM-17",
+  "name": "Depth Raster",
+  "type": "STATIC"
+}

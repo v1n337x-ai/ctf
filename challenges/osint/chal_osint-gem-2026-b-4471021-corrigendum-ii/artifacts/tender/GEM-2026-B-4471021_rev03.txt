@@ -1,0 +1,31 @@
+GOVERNMENT e-MARKETPLACE / GeM
+BID NO. GEM/2026/B/4471021
+Subject: Procurement of Smart Meter Firmware - National Rollout
+
+REVISION 03
+Issued: 2026-03-11
+
+1.0  Scope
+  Supply, signing and field rollout of smart meter firmware across
+  all divisions, including the metering stack and key provisioning.
+
+2.0  Annexures
+  Annexure-A  Technical specification
+  Annexure-B  Inspection and acceptance criteria
+  Annexure-C  Asset nomenclature (INTERNAL)
+  Annexure-D  Price schedule (withdrawn at this revision)
+
+ANNEXURE-C -- ASSET NOMENCLATURE (INTERNAL)
+NOTE: This annexure is internal. It exists so that firmware images
+can be named consistently per asset. It is not for publication.
+
+asset_code                                   commissioned / remark
+------------------------------------------   ---------------------------
+PRG/B01-220KV/IED-A                          S Receiving bay, commissioned 2019-04
+PRG/B04-400KV/IED-A                          S Main transformer #1 bay, commissioned 2019-11
+PRG/B07-400KV/IED-A                          S Main transformer #2 bay, commissioned 2020-03
+PRG/B12-765KV/IED-B                          E 765 kV line 1 protection, commissioned 2021-08
+PRG/B12-765KV/IED-C                          306e6574656e6465727468726565726576697369306e73
+PRG/SJ-132KV/IED-A                           Switchyard control, commissioned 2018-02
+
+-- end of revision --

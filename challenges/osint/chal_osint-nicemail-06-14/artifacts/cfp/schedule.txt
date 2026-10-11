@@ -1,0 +1,21 @@
+REGIONAL POWER SYSTEMS ENGINEERING CONFERENCE 2024 -- PROGRAMME
+
+Track B -- Protection, Measurement and IED Firmware
+
+  B1  09:30  Substation automation rollout: six years of lessons
+            Ramesh Ramesh, Protection Division
+
+  B2  10:15  Deterministic firmware signing for constrained metering devices
+            Kavitha Ranganathan, IED Firmware
+
+  B3  11:00  Metering data pipeline reliability under monsoon load
+            Maryam Qureshi, SCADA
+
+  B4  11:45  Panel design in high seismic zones
+            Karthik Ranganathan, Design
+
+  B5  12:30  Relay coordination studies and commissioning practice
+            Deepa Nair, Protection Division
+
+  B6  14:00  Panel discussion: what we audit, and what we only assume
+            chaired by the Head of Division

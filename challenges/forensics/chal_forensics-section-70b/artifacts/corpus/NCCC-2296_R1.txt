@@ -1,0 +1,16 @@
+id: NCCC-2296/R1
+scheme: nccc
+date: 2026-02-14
+title: Metadata collection scope, quarterly
+office: PRITHVI-OPS
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+Revision 1 of 2.
+Supersedes revision 0.
+
+references:
+  - PRITHVI/REV/2026/0142
+  - S70B/ANNEX/07

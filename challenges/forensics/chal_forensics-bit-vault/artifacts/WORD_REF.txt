@@ -1,0 +1,26 @@
+BIT9 WORD REFERENCE
+===================
+Published by the logger vendor. Describes the word encoding only.
+
+Word
+----
+Every word is 9 bits, packed most-significant-bit first into a contiguous
+bit stream. The stream is padded with zero bits to a byte boundary.
+
+    type   3 bits   bits 8..6
+    value  6 bits   bits 5..0
+
+    type 0   literal    value indexes the logger alphabet
+    type 1   skip      value is noise
+    type 2   marker    value is noise
+    type 3-7 reserved  value is noise
+
+The logger alphabet, 64 entries, index 0 first:
+
+    abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-
+
+Notes
+-----
+Words are written to the stream in reverse acquisition order: the last word
+acquired is the first word in the stream. The logger does this so that a
+reader must buffer the whole stream before emitting anything.

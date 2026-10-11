@@ -1,0 +1,21 @@
+RESEARCHER NOTES -- paid placement on government app queries
+transferred 2026-08-02
+
+Observation, repeated across six capture windows:
+
+  * The unit count never changes, only the order.
+  * Exactly one destination survives in every window. That is not normal
+    rotation. Normal rotation replaces destinations.
+  * Two destinations in the registry never appear at all.
+  * One registered domain appears in some windows and not others. That one is
+    a government site with an availability problem, not an adversary.
+
+The repeated destination is not a government domain. Confirm against
+reference/nic_domains.txt before concluding anything.
+
+Two capture windows returned an interstitial for every unit. Notes from the
+collector: "the page only renders for us on Indian egress. Off-region we get
+redirected to the real site. Feels deliberate, and it is the reason this took
+four months to notice."
+
+Do not fetch the landing page. Read the archive instead.

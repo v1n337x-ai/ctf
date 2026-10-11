@@ -1,0 +1,14 @@
+id: S70B/ANNEX/806
+scheme: annex
+date: 2026-01-07
+title: Protection settings baseline, region 806
+office: PRITHVI-FIELD
+asset_class: ASSETCLASS-C
+reachable_without_login: NO
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - S70B/ANNEX/306

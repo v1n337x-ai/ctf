@@ -1,0 +1,9 @@
+ADV-0001
+IMD DISTRICT RAINFALL ADVISORY -- CORROBORATION COPY
+issued 2025-06-03 06:00 IST
+subdivision: West Rajasthan
+departure from normal: 101% of LPA (1971-2020)
+note: first advance of the monsoon into the region
+reporting stations: AWS-1211, AWS-1408, ARG-0433
+routine order: sub-division down, date across
+distribution: district collectors, SLDC, NCSC-EDGEM mirror

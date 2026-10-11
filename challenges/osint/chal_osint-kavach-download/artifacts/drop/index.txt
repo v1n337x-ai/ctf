@@ -1,0 +1,17 @@
+# index
+# dead drop -- do not browse past this file
+# last updated before the July window opened
+
+ocs-admin-notification.eml
+firmware-manifest-excerpt.txt
+meter-fw-4.11-public-notes.txt
+build-manifest-schema.json
+ocs-service-account.txt
++ 11 files not listed
+
+-- NOTES --
+most of these are public anyway. that is the point.
+if you are reading this from the mirror, you already had the perms.
+
+ICS is on the OCS host. asset register export attached in a later bundle.
+receipt: 34647370347966307274686566346b656430776e6c303464

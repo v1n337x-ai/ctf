@@ -1,0 +1,495 @@
+{
+ "static": [
+  {
+   "id": "SIM-01",
+   "name": "No Station Recorded It",
+   "category": "OSINT",
+   "category_slug": "osint",
+   "difficulty": "Easy",
+   "type": "STATIC",
+   "act": "I",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "n0st4ti0nrec0rdedit",
+   "path": "osint/no-station-recorded-it",
+   "zip": "player-zips/osint/no-station-recorded-it.zip",
+   "hint": "The 5 August 2025 IMD press copy records that no station met the cloudburst threshold at Dharali. Corroborate the forged claim against it."
+  },
+  {
+   "id": "SIM-02",
+   "name": "GEM/2026/B/4471021, Corrigendum II",
+   "category": "OSINT",
+   "category_slug": "osint",
+   "difficulty": "Easy",
+   "type": "STATIC",
+   "act": "I",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "0netenderthreerevisi0ns",
+   "path": "osint/gem-2026-b-4471021-corrigendum-ii",
+   "zip": "player-zips/osint/gem-2026-b-4471021-corrigendum-ii.zip",
+   "hint": "Corrigendum I reinstates Annexure-D, which is the price schedule. That is the decoy. The nomenclature table only survives in full at revision 1."
+  },
+  {
+   "id": "SIM-03",
+   "name": "NICeMail, 06:14",
+   "category": "OSINT",
+   "category_slug": "osint",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "I",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "bin4riesrun0nindi4ncl0ck",
+   "path": "osint/nicemail-06-14",
+   "zip": "player-zips/osint/nicemail-06-14.zip",
+   "hint": "The photograph is a JPEG and the whiteboard transcription is in ImageDescription (0x010E) and base64 UserComment (0x9286). Try `strings`, `file`, or PIL."
+  },
+  {
+   "id": "SIM-04",
+   "name": "Kavach Download",
+   "category": "OSINT",
+   "category_slug": "osint",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "I",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "4dsp4yf0rthef4ked0wnl04d",
+   "path": "osint/kavach-download",
+   "zip": "player-zips/osint/kavach-download.zip",
+   "hint": "Cross-check against reference/nic_domains.txt. A registered domain also drops out of one window (availability), so 'present in all' alone is not sufficient."
+  },
+  {
+   "id": "SIM-05",
+   "name": "SHA-1 Is Retired And Sigs Keep Verifying",
+   "category": "Forensics",
+   "category_slug": "forensics",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "I",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "sh4tteredtw0files0neh4sh",
+   "path": "forensics/sha-1-is-retired-and-sigs-keep-verifying",
+   "zip": "player-zips/forensics/sha-1-is-retired-and-sigs-keep-verifying.zip",
+   "hint": "Locate the bar by colour: a solid block that is neither paper nor a rule line. Then read the low bits of its blue channel."
+  },
+  {
+   "id": "SIM-06",
+   "name": "Section 70B",
+   "category": "Forensics",
+   "category_slug": "forensics",
+   "difficulty": "Hard",
+   "type": "STATIC",
+   "act": "I",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "secti0nseventyb",
+   "path": "forensics/section-70b",
+   "zip": "player-zips/forensics/section-70b.zip",
+   "hint": "Group revisions by base ID. The longest chain's FINAL revision carries the operator name - the earlier revisions do not."
+  },
+  {
+   "id": "SIM-13",
+   "name": "Chitthi Is The Letter",
+   "category": "Crypto",
+   "category_slug": "crypto",
+   "difficulty": "Easy",
+   "type": "STATIC",
+   "act": "III",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "thefestiv4lletter",
+   "path": "crypto/chitthi-is-the-letter",
+   "zip": "player-zips/crypto/chitthi-is-the-letter.zip",
+   "hint": "The keyword is the letter set of PRITHVI/{BAY}-{VOLTAGE}KV/{IED}."
+  },
+  {
+   "id": "SIM-14",
+   "name": "Six Bytes Per Ping",
+   "category": "Reverse Engineering",
+   "category_slug": "reverse-engineering",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "II",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "sixbytes0neping",
+   "path": "reverse-engineering/six-bytes-per-ping",
+   "zip": "player-zips/reverse-engineering/six-bytes-per-ping.zip",
+   "hint": "`seq` is stamped at capture time, not at write time. Several capture threads interleave, so storage order is not acquisition order."
+  },
+  {
+   "id": "SIM-15",
+   "name": "Tape Vault",
+   "category": "Forensics",
+   "category_slug": "forensics",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "II",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "everyfile0ncein0rder",
+   "path": "forensics/tape-vault",
+   "zip": "player-zips/forensics/tape-vault.zip",
+   "hint": "The keystream is chained: the state after each plaintext byte feeds the next byte, so records must be decrypted in acquisition order."
+  },
+  {
+   "id": "SIM-16",
+   "name": "Bit Vault",
+   "category": "Forensics",
+   "category_slug": "forensics",
+   "difficulty": "Hard",
+   "type": "STATIC",
+   "act": "II",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "ninebitsperw0rd",
+   "path": "forensics/bit-vault",
+   "zip": "player-zips/forensics/bit-vault.zip",
+   "hint": "Words are written in reverse acquisition order: the last word acquired is the first word in the stream."
+  },
+  {
+   "id": "SIM-17",
+   "name": "Depth Raster",
+   "category": "Reverse Engineering",
+   "category_slug": "reverse-engineering",
+   "difficulty": "Hard",
+   "type": "STATIC",
+   "act": "II",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "ther4sterre4dssidew4ys",
+   "path": "reverse-engineering/depth-raster",
+   "zip": "player-zips/reverse-engineering/depth-raster.zip",
+   "hint": "The RLE encodes runs of identical pixels. Expand it into a flat array, then read it row by row to recover the row-major raster."
+  },
+  {
+   "id": "SIM-18",
+   "name": "GOOSE Is Layer 2",
+   "category": "Reverse Engineering",
+   "category_slug": "reverse-engineering",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "IV",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "g00seisl4yertw0",
+   "path": "reverse-engineering/goose-is-layer-2",
+   "zip": "player-zips/reverse-engineering/goose-is-layer-2.zip",
+   "hint": "Stored form is rotate right 3 then XOR 0x5A. Rotation is not symmetric."
+  },
+  {
+   "id": "SIM-19",
+   "name": "Dispatch Log",
+   "category": "Reverse Engineering",
+   "category_slug": "reverse-engineering",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "II",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "fl4ttenedc0ntr0lfl0w",
+   "path": "reverse-engineering/dispatch-log",
+   "zip": "player-zips/reverse-engineering/dispatch-log.zip",
+   "hint": "The trace is the whole program. Execute the records in order from a register file of zeros, de-obfuscating each opcode as you read it."
+  },
+  {
+   "id": "SIM-20",
+   "name": "Hamraaz",
+   "category": "Reverse Engineering",
+   "category_slug": "reverse-engineering",
+   "difficulty": "Medium",
+   "type": "STATIC",
+   "act": "IV",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "h4mr44zis4re4l4pp",
+   "path": "reverse-engineering/hamraaz",
+   "zip": "player-zips/reverse-engineering/hamraaz.zip",
+   "hint": "Recompute the checksum over the embedded payload yourself."
+  },
+  {
+   "id": "SIM-21",
+   "name": "BYOVD",
+   "category": "Reverse Engineering",
+   "category_slug": "reverse-engineering",
+   "difficulty": "Hard",
+   "type": "STATIC",
+   "act": "IV",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "bringy0ur0wndriver",
+   "path": "reverse-engineering/byovd",
+   "zip": "player-zips/reverse-engineering/byovd.zip",
+   "hint": "Rebuild the dispatch table from the IOCTL handler and read the key schedule it runs at init."
+  },
+  {
+   "id": "SIM-22",
+   "name": "NISAR Downlink",
+   "category": "Reverse Engineering",
+   "category_slug": "reverse-engineering",
+   "difficulty": "Hard",
+   "type": "STATIC",
+   "act": "IV",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "twelved4yst0descend",
+   "path": "reverse-engineering/nisar-downlink",
+   "zip": "player-zips/reverse-engineering/nisar-downlink.zip",
+   "hint": "Read the signature check and find what it does not check."
+  },
+  {
+   "id": "SIM-35",
+   "name": "NACH",
+   "category": "Forensics",
+   "category_slug": "forensics",
+   "difficulty": "Insane",
+   "type": "STATIC",
+   "act": "VIII",
+   "value": 5,
+   "hint_cost": 3,
+   "flag": "then4chcle4ringh0use",
+   "path": "forensics/nach",
+   "zip": "player-zips/forensics/nach.zip",
+   "hint": "Shredded documents scanned before shredding is a habit, not an accident."
+  }
+ ],
+ "service": {
+  "WEB01": [
+   "Metadata From Cyberspace",
+   "SSRF",
+   "ssrfserver4sked4n0therh0st"
+  ],
+  "WEB02": [
+   "Udgam",
+   "JWT alg=none forgery",
+   "jwtresults0utsidethespec"
+  ],
+  "WEB03": [
+   "Right to Public Services",
+   "Unrestricted file upload",
+   "upl04drightt0servicescl0nes"
+  ],
+  "WEB04": [
+   "Vendor Master",
+   "Second-order SQL injection",
+   "vend0rse4rchisf4stbec4usec4ched"
+  ],
+  "WEB05": [
+   "Grid Code",
+   "GraphQL cross-tenant access",
+   "gr4phql0nefieldnever4sked"
+  ],
+  "WEB06": [
+   "Availability Based Tariff",
+   "Server-side template injection",
+   "sstishiftrep0rtfr0m4templ4te"
+  ],
+  "WEB07": [
+   "The Consent Screen",
+   "OAuth open redirect",
+   "04uththec0dec4nbech4nged1nce"
+  ],
+  "WEB08": [
+   "The Settlement Screen",
+   "SQL injection",
+   "uni0n3rderbyc0untsc0lumns"
+  ],
+  "WEB09": [
+   "Yesterday's Appliance",
+   "Default credentials + unsafe deserialisation",
+   "4ppli4ncedef4ultcredenti4lsneverr0t4ted"
+  ]
+ },
+ "unwritten": [
+  [
+   "WEB10",
+   "The Build Server",
+   "CI secret exposure"
+  ],
+  [
+   "SIM-23",
+   "Port 2404",
+   "Format string vulnerability"
+  ],
+  [
+   "SIM-24",
+   "Session Cache",
+   "Use-after-free"
+  ],
+  [
+   "SIM-25",
+   "Kavach",
+   "Frame length confusion"
+  ],
+  [
+   "SIM-26",
+   "Time of Check",
+   "TOCTOU race condition"
+  ],
+  [
+   "SIM-27",
+   "Kharga",
+   "ACL enumeration"
+  ],
+  [
+   "SIM-28",
+   "NOPASSWD",
+   "Over-broad sudo rule"
+  ],
+  [
+   "SIM-29",
+   "Krbtgt",
+   "Password reuse / history"
+  ],
+  [
+   "SIM-30",
+   "Cross Domain",
+   "Unsigned update agent"
+  ],
+  [
+   "SIM-31",
+   "DCSync",
+   "Over-broad replication right"
+  ],
+  [
+   "SIM-32",
+   "BHASKARA",
+   "Unscoped agent tool call"
+  ],
+  [
+   "SIM-33",
+   "Core Zone",
+   "Classifier boundary"
+  ],
+  [
+   "SIM-34",
+   "MMCFS",
+   "Membership inference"
+  ],
+  [
+   "SIM-36",
+   "The Finale",
+   "Ordered challenge chain"
+  ]
+ ],
+ "hints": {
+  "WEB01": {
+   "hint": "The aggregator fetches a URL on a user's behalf. Ask what happens when that URL points back into the trust boundary rather than out of it -- the response is summarised back to the caller, so you can read what the service reached. Compare the code's host check against the code that actually issues the request.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB02": {
+   "hint": "The portal issues a JWT per request and verifies it. Look at the `alg` header handling rather than at the signature: what does the server do with a token whose header says `none` and whose body claims a role it never granted?",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB03": {
+   "hint": "The document upload handler validates the file extension and then builds a path from it. Ask what is validated and what is merely derived. The uploaded file is rendered back to a later request, so reaching a read is enough.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB04": {
+   "hint": "Search results are cached, and the cache is repopulated in the background from records that ordinary users can write. The value you search is the input; the record that fills the result is not. Trace who writes the store the cache reads from.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB05": {
+   "hint": "Introspection is enabled, and the schema is the whole API surface including fields no page renders. Ask which field crosses a tenant boundary, and whether the resolver checks the tenant or trusts the caller's argument.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB06": {
+   "hint": "The shift report is rendered from a template, and the row values reach that template. Ask what the template engine is given to work with -- if a value is concatenated rather than passed as data, the engine evaluates it.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB07": {
+   "hint": "Read `redirect_allowed`. RFC 6749 s3.1.2.3 and RFC 8252 s7.3 both require exact string comparison, and the function's own comment says so before it does something else. Then read `/token` and compare the stored `redirect_uri` to the presented one.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB08": {
+   "hint": "The settlement screen takes a numeric reference. Injection into a numeric column needs no quoting, which makes it the easiest variant to construct correctly -- try a UNION with the right column count first, then order by to find the count.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB09": {
+   "hint": "Two separate flaws. The appliance ships with default credentials that nobody has rotated, and once you are in, the operator console deserialises an object you control. Take them in that order; neither one alone reaches the objective.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "WEB10": {
+   "hint": "Two things again, and the order matters. `credentials.xml` stores the controller's own credentials, and Jenkins' own documentation calls that obfuscation rather than encryption. Then ask where the build agent's filesystem privilege ends -- an agent that runs controller steps is not separated from the controller.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-23": {
+   "hint": "The daemon greets every connection by echoing your input into a diagnostic string built with a C formatting function. Feed it format specifiers and read what comes back.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-24": {
+   "hint": "The session table entry is freed on disconnect and the allocator reuses that memory for the next session without clearing it. A second allocation therefore contains the first session's bytes. The auth gate on the API is the easy half; this is the other half.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-25": {
+   "hint": "Read the frame parser's length handling. If a declared length is trusted over the bytes actually present, the prefix of the frame can be set independently of what follows it.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-26": {
+   "hint": "Find the check and find the action, then ask whether they happen at the same instant. The window is narrow, but race windows close only for honest clients. Stand on the commit side of the check.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-27": {
+   "hint": "The 'lockdown' is an access control list, and ACLs are readable from inside by anyone who has logged in. Enumerate it first. The overnight backup task runs a file this domain logon can write, which is the other half.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-28": {
+   "hint": "The sudo rule is not the bug -- it is a NOPASSWD rule for one helper, which is a deliberate and legitimate configuration. Read what that helper sources, and ask who can write to the directory it reads from.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-29": {
+   "hint": "Two facts do the work. `krbtgt` password history is 2, so the old value stays recoverable until it is reset twice with a gap at least as long as the maximum ticket lifetime -- and guidance requires that reset at least every 180 days. Separately, service tickets in RC4 (etype 23) crack roughly a thousand times faster than the AES types. Ask the directory for a ticket, then crack it.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-30": {
+   "hint": "The conduit agent checks the *version* of what it is handed. It does not check the trust of what is handing it. Ask where the update payload is fetched from, and whether that source is verified at all -- then ask where the agent can be made to load something of yours.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-31": {
+   "hint": "No exploit is involved. Domain Admin needs one replication right granted to an ordinary principal, and the protocol is not broken -- the ACL is wrong. Ask what rights this account's ACL carries, and read the documentation string in the source for which operations require which rights.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-32": {
+   "hint": "The tool call is scoped in the documentation to what operators can see, and the scope is not enforced in the code. OWASP's LLM Top 10 does not treat RAG or fine-tuning as a mitigation for prompt injection, and it lists excessive agency as a scoping failure between granted permission and enforced check. Ask what the tool is permitted to reach once the prompt is under your control.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-33": {
+   "hint": "The classifier was trained only on examples of what to block, so it has never seen the boundary it is defending. The query budget is the constraint, not the obstacle. Probe the boundary rather than the label -- the interesting cases are the ones nearest it, and they are slower to answer.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-34": {
+   "hint": "Two named results are relevant. Membership inference (Shokri et al., 2017) determines whether a specific record was in the training set from a model's outputs alone, and model extraction from a public prediction API is practical at roughly 1000 queries (Tramer et al.). Either reaches the objective; one is cheaper.",
+   "hint_cost": 3,
+   "score": 5
+  },
+  "SIM-36": {
+   "hint": "The finale. The console accepts proofs in order and only in order, and the eight Master Shards are the flags of eight other challenges. The agent that fronts the console runs as a service with a writable library path, so reaching the console is one substitution away. Solve the other eight first.",
+   "hint_cost": 3,
+   "score": 5
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "advisory_id": "ADV-0007",
+  "issued": "2025-08-05",
+  "subdivision": "West Rajasthan",
+  "departure_pct_of_lpa": 72,
+  "stations": [
+    {
+      "code": "ARG-0459",
+      "rainfall_mm_24h": 20
+    },
+    {
+      "code": "AWS-1104",
+      "rainfall_mm_24h": 34
+    },
+    {
+      "code": "AWS-1408",
+      "rainfall_mm_24h": 8
+    }
+  ]
+}

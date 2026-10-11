@@ -1,0 +1,16 @@
+id: S70B/ANNEX/07
+scheme: annex
+date: 2026-03-02
+title: Staffing and delegated authority (restricted)
+office: PRWC
+
+Delegation of authority for the quarter. The following department
+holds delegated sign-off for works and contracts packages and can
+approve a firmware image without a second reviewer.
+
+  department: PROCUREMENT (WORKS AND CONTRACTS)
+  code: PRWC
+  note: this annex was reissued once; earlier revision is superseded.
+
+references:
+  - PRITHVI/REV/2026/0142

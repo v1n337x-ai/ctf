@@ -1,0 +1,21 @@
+SIM-07 -- Metadata From Cyberspace
+Act II / Web / Easy
+
+The NCCC pulls metadata from cyberspace to build situational
+awareness. One of its public aggregators fetches the upstream source URL on
+your behalf. Somebody inside uses it every morning at 04:00 and is never once
+in the logs.
+
+OBJECTIVE
+
+Reach the aggregator's internal-only document service and
+retrieve the document filed there.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8080/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

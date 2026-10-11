@@ -1,0 +1,49 @@
+DLOG STATION ISA REFERENCE
+==========================
+Published by the dispatch station vendor. Describes the register machine only.
+
+Machine
+-------
+Forty-eight 32-bit registers, r0..r47. Every register starts at zero.
+
+Opcodes
+-------
+One byte. The trace stores each opcode XORed with the low byte of the header
+salt; XOR the byte with (salt & 0xFF) to recover the real opcode.
+
+    0x01  MOVI  r[d], imm      r[d] = imm
+    0x02  MOV   r[d], r[s]     r[d] = r[s]
+    0x03  XORI  r[d], imm      r[d] = r[d] ^ imm
+    0x04  XOR   r[d], r[s]     r[d] = r[d] ^ r[s]
+    0x05  ADD   r[d], r[s]     r[d] = r[d] + r[s]
+    0x06  SUB   r[d], r[s]     r[d] = r[d] - r[s]
+    0x07  ROL   r[d], r[s]     r[d] = rotate_left32(r[d], r[s] & 31)
+    0x08  XCHG  r[d], r[s]     swap(r[d], r[s])
+    0x0A  NOP                  no effect
+    0x0B  HALT                 end of trace
+
+Trace record
+------------
+Four bytes per instruction, in execution order:
+
+    byte 0   opcode XOR (salt & 0xFF)
+    byte 1   dst register index
+    byte 2   src register index
+    byte 3   immediate operand
+
+Answer registers
+----------------
+The header's ans_len field says how many registers carry the answer. When the
+trace halts, r1..r(ans_len) hold the character codes of the answer, in order,
+low register index first. Registers above r(ans_len) hold scratch values and
+mean nothing.
+
+Notes
+-----
+The trace is the whole program: execute it from record 0 and stop at HALT. The
+station never used self-modifying records, so every register's final value is
+fully determined by the records before it.
+
+Reading the immediate operands out of the trace does not give you the answer.
+The station masked its character loads, and it scattered them across the
+register file.

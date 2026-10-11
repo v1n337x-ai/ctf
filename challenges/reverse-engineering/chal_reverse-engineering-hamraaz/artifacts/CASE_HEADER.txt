@@ -1,0 +1,8 @@
+SIM/2026/04 -- ACT IV -- 20
+"Hamraaz"
+
+The field-verification app verifies itself before it releases the local
+credential store. Something in that verification went wrong between the
+build farm and the field handset.
+
+Patch what the binary checks, then run it.

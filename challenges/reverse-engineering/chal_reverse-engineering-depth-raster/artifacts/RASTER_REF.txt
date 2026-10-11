@@ -1,0 +1,18 @@
+RSTR RASTER REFERENCE
+=====================
+Published by the survey instrument vendor. Describes the encoding only.
+
+Raster
+------
+The raster is 1 bit per pixel. It is stored run-length encoded as pairs of
+(count, value) bytes, where count is 1..255 and value is 0 or 1.
+
+The RLE encodes the raster in column-major order: column by column, top to
+bottom, starting at the first column. To recover the row-major raster, expand
+the RLE into a flat pixel array of width*height bits, then read it row by row.
+
+Text
+----
+The raster renders text using the 5x7 bitmap font in FONT.txt. Each character
+is 5 pixels wide and 7 pixels tall. Characters are separated by one blank
+column. The text is rendered left to right, top to bottom.

@@ -1,0 +1,19 @@
+SIM-39 -- Yesterday's Appliance
+Act II / Web / Hard
+
+The substation appliance is nine years old. It cannot be replaced "
+"this financial year. It can, however, be patched - except the vendor's "
+support contract ended in 2023 and nobody remembers who set it up.
+
+OBJECTIVE
+
+Get in through the components nobody has replaced.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8092/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

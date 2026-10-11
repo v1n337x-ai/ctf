@@ -1,0 +1,18 @@
+SIM/2026/07 -- ACT I -- 01
+"No Station Recorded It"
+
+You have been handed the mirror.
+
+A public rainfall and outage advisory feed has been falsified. Somebody with
+routine write access to the corroboration copy of the feed used it, in
+August, during the heaviest week of the season, to publish a line that does
+not belong there.
+
+SANDVIPER left one error in every bundle they ever copied out. Months of quiet
+access and nobody wrote a single false sentence -- until they needed you to
+believe they had been here.
+
+Find the falsified bulletin. Recover what was hidden in it.
+
+The reference material in press/ and registry/ is authentic and was retained
+for correlation. Ground truth beats assumption.

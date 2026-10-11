@@ -1,0 +1,15 @@
+SIM/2026/07 -- ACT I -- 04
+"Kavach Download"
+
+A paid-search advertiser has been buying the query "kavach download" for six
+capture windows. Six windows, six snapshots in ads/.
+
+Nobody noticed because every single one of those destinations looks like a
+government site, opens a government-looking page, and hands you a working
+application. Which is, of course, the problem.
+
+Answer the cell's questions:
+  1. Which destination survives in every window and is not a government site?
+  2. The researcher explicitly warned about fetching the landing page. What
+     did reading the archive instead get you?
+  3. The drop index ends in a receipt. Decode it.

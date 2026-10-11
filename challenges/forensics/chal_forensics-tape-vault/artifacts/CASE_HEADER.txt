@@ -1,0 +1,12 @@
+SIM/2026/07 -- ACT II -- 15
+"Tape Vault"
+
+A backup appliance wrote its index to a tape and then the appliance was
+decommissioned. The tape was kept. The vendor's framing reference for the
+container was kept with it.
+
+tape/index.tvt   the raw tape index
+FRAMING.txt      the vendor's published framing reference
+
+Answer the operator's question:
+  Which files were committed to the tape, and in what order?

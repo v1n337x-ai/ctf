@@ -1,0 +1,10 @@
+SIM/2026/07 -- ACT IV -- 18
+"GOOSE Is Layer 2"
+
+A meter image pulled off a live feeder, and the GOOSE frame it published.
+
+The frame is encrypted under the telemetry key. The key is inside the image.
+The image is stripped and the key is obfuscated, because that is what this
+vendor has done since 4.9 and nobody has ever needed to read it before.
+
+Recover the release key from the GOOSE frame.

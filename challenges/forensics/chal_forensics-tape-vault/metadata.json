@@ -1,0 +1,13 @@
+{
+  "act": "II",
+  "category": "Forensics",
+  "difficulty": "Medium",
+  "flag_policy": {
+    "per_instance": false,
+    "regex": "^[A-Za-z0-9]+$",
+    "sealed_outside_player_tree": true
+  },
+  "id": "SIM-15",
+  "name": "Tape Vault",
+  "type": "STATIC"
+}

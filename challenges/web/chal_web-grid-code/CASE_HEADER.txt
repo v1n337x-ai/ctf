@@ -1,0 +1,19 @@
+SIM-11 -- Grid Code
+Act II / Web / Hard
+
+Every modern utility runs a GraphQL API and every one of them
+forgets that a schema is a promise about what exists, not an authorisation
+model. Introspection is on.
+
+OBJECTIVE
+
+Find and read the field that crosses a tenant boundary.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8080/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

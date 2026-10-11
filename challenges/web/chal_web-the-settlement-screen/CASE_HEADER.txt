@@ -1,0 +1,18 @@
+SIM-38 -- The Settlement Screen
+Act II / Web / Medium
+
+The settlement screen has been on the same query since the portal
+was retired. It is the only screen nobody has rewritten, because it works.
+
+OBJECTIVE
+
+UNION your way to the settlement table.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8091/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

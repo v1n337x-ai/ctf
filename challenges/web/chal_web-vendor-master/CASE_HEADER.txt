@@ -1,0 +1,19 @@
+SIM-10 -- Vendor Master
+Act II / Web / Medium
+
+Nobody decommissioned the vendor portal. It was retired in the
+sense that a building is retired when the company moves out and leaves the
+furniture. Vendors are searched by name, and the search is fast.
+
+OBJECTIVE
+
+Read privileged data out of the cached vendor search.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8080/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

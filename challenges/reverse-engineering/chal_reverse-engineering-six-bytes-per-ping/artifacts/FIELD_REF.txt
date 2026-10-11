@@ -1,0 +1,41 @@
+TLM1 FIELD REFERENCE
+====================
+Published by the logger vendor for integrators. Describes the container only.
+
+Container
+---------
+Every capture begins with a 12 byte header:
+
+    offset  size  field
+    0       4     magic, ASCII "TLM1"
+    4       2     record_count, unsigned 16 bit little endian
+    6       2     reserved, unsigned 16 bit little endian, always zero
+    8       4     total_bits, unsigned 32 bit little endian, informational
+
+The header is followed by exactly record_count fixed-size records.
+
+Record
+------
+    offset  size  field
+    0       2     seq, unsigned 16 bit little endian
+    2       2     bits, unsigned 16 bit little endian, bit fields
+    4       2     crc16, unsigned 16 bit little endian
+
+`bits` carries three fields packed low-to-high from bit 0:
+
+    status   3 bits   bits 0..2
+    chan     6 bits   bits 3..8
+    spare    7 bits   bits 9..15
+
+crc16 is CRC-16/CCITT-FALSE (poly 0x1021, init 0xFFFF, no reflection, no final
+xor) computed over the first four bytes of the record.
+
+Notes
+-----
+`seq` is stamped by the acquisition hardware when a ping is captured. The
+logger's storage layer appends records as each ping is finalised; several
+concurrent capture threads therefore interleave. Consumers are expected to
+order by `seq` themselves.
+
+`chan` indexes the instrument channel alphabet supplied separately by the
+commissioning engineer. The commissioning sheet for this unit is not included.

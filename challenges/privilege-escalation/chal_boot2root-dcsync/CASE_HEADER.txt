@@ -1,0 +1,19 @@
+SIM-31 -- DCSync
+Act VI / Boot2Root / Expert
+
+Domain Admin. Every account, every machine, every key, forever. On a
+healthy domain this takes a specific, well-known, entirely preventable
+mistake.
+
+OBJECTIVE
+
+Take Domain Admin on the domain controller.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: nc localhost 2226
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

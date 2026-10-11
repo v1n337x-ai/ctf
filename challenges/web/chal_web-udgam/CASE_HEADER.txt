@@ -1,0 +1,19 @@
+SIM-08 -- Udgam
+Act II / Web / Medium
+
+The unclaimed-deposits gateway lets a mobile number and a one-time
+password reach records that were never supposed to be visible. Valid is not the
+same as signed.
+
+OBJECTIVE
+
+Forge an administrative session and read the record.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8080/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

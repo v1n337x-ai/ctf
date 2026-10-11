@@ -1,0 +1,20 @@
+{
+  "advisory_id": "ADV-0002",
+  "issued": "2025-06-10",
+  "subdivision": "East Rajasthan",
+  "departure_pct_of_lpa": 98,
+  "stations": [
+    {
+      "code": "ARG-0468",
+      "rainfall_mm_24h": 32
+    },
+    {
+      "code": "ARG-0433",
+      "rainfall_mm_24h": 37
+    },
+    {
+      "code": "AWS-1408",
+      "rainfall_mm_24h": 8
+    }
+  ]
+}

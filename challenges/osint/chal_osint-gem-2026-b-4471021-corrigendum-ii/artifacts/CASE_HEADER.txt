@@ -1,0 +1,20 @@
+SIM/2026/07 -- ACT I -- 02
+"GEM/2026/B/4471021, Corrigendum II"
+
+The procurement mirror is public. So is everything the mirror has ever
+published, including the revisions people hoped nobody had kept.
+
+One of these documents contains PRITHVI's internal asset nomenclature -- the
+convention every firmware image in the country is named by -- and the name of
+the build channel that produces them.
+
+A caution from the cell, in the margin, in someone's handwriting:
+
+    "Whoever maintains this mirror restored a table from an older copy.
+     Check every revision. Do not check only the last one."
+
+Answer the cell's three questions:
+  1. What is the firmware build channel?
+  2. By the convention, what is the code for bay 12, line 1, the next IED
+     after IED-C on the 765 kV side?
+  3. One remark in the nomenclature table is not a remark. Decode it.

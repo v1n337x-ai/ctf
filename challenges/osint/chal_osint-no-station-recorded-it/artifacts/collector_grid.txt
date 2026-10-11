@@ -1,0 +1,17 @@
+COLLECTOR GRID -- FIELD REFERENCE
+================================
+Published with the advisory mirror for district collectors.
+
+Each corroboration copy carries a collector grid: a fixed four column table
+whose cells are filled column by column, top to bottom, starting at the first
+column. A cell is either blank or holds a two digit decimal index.
+
+Indices address the collector alphabet, 62 entries, index 0 first:
+
+    ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+
+Reading the grid column by column and skipping blank cells reproduces the
+recorded line. The final column may be partly blank; that is normal and is
+not an error in the copy.
+
+The grid is a distribution aid. It is not encrypted.

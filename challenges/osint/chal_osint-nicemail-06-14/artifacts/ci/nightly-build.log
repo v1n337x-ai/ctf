@@ -1,0 +1,35 @@
+nightly firmware build -- ppg-fw-build-nightly
+runner: ppg-fw-build-nightly (IND-EAST-2)
+schedule: 06:14 IST, daily
+
+==> checkout
+    commit a91f4c7e2b8d0356
+    author  k.ranganathan <k.ranganathan@ppg-internal.example>
+    date    2026-04-28T06:14:22+05:30
+
+==> configure
+    target        iot_meter_r7
+    toolchain     arm-none-eabi-gcc 12.3.rel1
+    signing       fw-sign 3.1.0 (legacy digest)
+    build channel ppg-fw-build-nightly
+
+==> build
+    CC      arm-none-eabi-gcc
+    CFLAGS  -Os -ffunction-sections -fdata-sections
+    LDFLAGS -Wl,--gc-sections -specs=nano.specs
+    make[1]: Entering directory '/home/k.ranganathan/ppg/iot_meter_r7'
+    make[1]: warning: redefining 'KDF_SALT' macro in 'src/crypto/kdf.h'
+    make[1]: note: use -DKDF_SALT_FROM_MANIFEST=1 to silence
+    make[1]: *** [build/app_image.elf] Error 127
+    make[1]: recipe for target 'app_image' failed
+    make: *** [Makefile:41: all] Error 2
+
+==> summary
+    BUILD FAILED at 06:14:22+05:30
+    artefact NOT produced
+    note: build windows are IST only; runner clock is pinned.
+
+NOTE FROM THE CELL
+    Every one of these logs is 06:14. Every one of them is +05:30.
+    The runner refuses to start outside IST. Whoever this is, they are not
+    on our continent -- and they are consistent about it.

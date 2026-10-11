@@ -1,0 +1,32 @@
+[
+  {
+    "issuer": "NCSC-EDGEM",
+    "subject": "metadata.nccc-cs.internal",
+    "not_before": "2025-08-04T22:14:07Z",
+    "serial": "4A19C7E20F"
+  },
+  {
+    "issuer": "NCSC-EDGEM",
+    "subject": "collector.rainfall-gov.in",
+    "not_before": "2025-08-04T22:15:31Z",
+    "serial": "4A19C7E311"
+  },
+  {
+    "issuer": "PRITHVI-INFRA",
+    "subject": "ops-collector.rainfall-gov.in",
+    "not_before": "2025-08-04T22:16:02Z",
+    "serial": "4A19C7E3A2"
+  },
+  {
+    "issuer": "PRITHVI-INFRA",
+    "subject": "mirror.ppg-internal.example",
+    "not_before": "2025-08-05T03:52:44Z",
+    "serial": "4A19C7F018"
+  },
+  {
+    "issuer": "PRITHVI-INFRA",
+    "subject": "archive.ppg-internal.example",
+    "not_before": "2025-08-05T03:53:19Z",
+    "serial": "4A19C7F044"
+  }
+]

@@ -1,0 +1,14 @@
+id: NCCC-3009/R2
+scheme: nccc
+date: 2026-04-02
+title: Load despatch interface note 809
+office: PRITHVI-OPS
+asset_class: ASSETCLASS-A
+reachable_without_login: NO
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - S70B/ANNEX/802

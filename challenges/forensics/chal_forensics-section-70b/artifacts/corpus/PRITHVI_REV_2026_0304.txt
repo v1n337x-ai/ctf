@@ -1,0 +1,14 @@
+id: PRITHVI/REV/2026/0304
+scheme: legacy
+date: 2026-05-24
+title: Firmware build provenance note 304
+office: PRWC
+asset_class: ASSETCLASS-B
+reachable_without_login: YES
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - PRITHVI/REV/2026/0142

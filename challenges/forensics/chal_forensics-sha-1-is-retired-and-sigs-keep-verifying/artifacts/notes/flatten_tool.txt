@@ -1,0 +1,33 @@
+NOTES -- capture tooling (shipped in the mail thread)
+
+The agreement came out of a mail gateway as a flattened PNG. Somebody
+screenshotted a PDF, cropped it, and re-saved it so that the gateway's text
+extractor would find nothing to scan. The redaction was applied before the
+flatten, not after.
+
+That is the detail worth sitting with. The redaction was applied BEFORE the
+flatten.
+
+Anyone who has run a document through an image pipeline will recognise what
+that means. A redaction drawn in a vector document is a rectangle of pixels.
+Once it is flattened, it is *still only* a rectangle of pixels, and a pixel
+can carry more than its colour.
+
+Conventions used by the tool (unversioned, standard):
+
+  marker colour   the redaction bar is a solid fill of one RGB value; find
+                  it by locating the solid block that is not paper and not a
+                  rule line
+  container       the low 2 bits of the BLUE channel of every pixel inside
+                  the bar, in row-major order
+  encoding        little-endian within each byte, 4 bytes per pixel,
+                  most-significant group first
+  key             each 2-bit group is XORed with 0x5A before use
+  terminator      the payload ends at the first NUL group after valid data;
+                  ignore padding
+
+The bar's colour value, if you want to skip the hunt:
+
+  bar RGB = (108, 108, 112)  (108, 108, 112)
+  key     = 0x5A
+  bits    = 2

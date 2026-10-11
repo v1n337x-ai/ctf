@@ -1,0 +1,16 @@
+SIM/2026/07 -- ACT III -- 13
+"Chitthi Is The Letter"
+
+A letter from inside the firmware office, forwarded by somebody who should not
+have forwarded it.
+
+The letter is in a substitution cipher. Not a strong one. Hand-built, keyed,
+and the key is not written down anywhere, because the man who wrote it works
+out of a document he has to look at every single day -- and you have already
+read that document. It was the nomenclature annexure that came back in
+Corrigendum II.
+
+The crib sheet gives you the opening words. From there it is arithmetic.
+
+Answer the cell's question:
+  What does the line in the letter actually say?

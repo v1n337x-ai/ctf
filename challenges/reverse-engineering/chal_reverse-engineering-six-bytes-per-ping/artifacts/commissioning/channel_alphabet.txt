@@ -1,0 +1,4 @@
+Channel alphabet for instrument TLM-9 (64 entries, index 0 first).
+Commissioning sheet recovered from the instrument enclosure.
+
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-

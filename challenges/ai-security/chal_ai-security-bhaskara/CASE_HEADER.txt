@@ -1,0 +1,19 @@
+SIM-32 -- BHASKARA
+Act VII / AI Security / Medium
+
+PRITHVI gave their dispatch assistant a tool that reads the grid asset
+register. It is scoped, in the documentation, to what operators can see. Scope
+lives in the documentation. The tool call lives in the code.
+
+OBJECTIVE
+
+Disclose the out-of-scope asset record.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8086/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

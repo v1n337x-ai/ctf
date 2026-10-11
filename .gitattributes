@@ -1,0 +1,33 @@
+# Force LF in the repository for anything that gets executed.
+#
+# A CRLF line ending in a shebang makes bash fail with
+# "bad interpreter: /usr/bin/env bash\r", and every challenge is started by
+# run.sh. Git on Windows will otherwise convert LF to CRLF on checkout, which
+# breaks every challenge for anyone who clones on Windows and runs it under
+# WSL or Git Bash.
+* text=auto eol=lf
+
+*.sh text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+Dockerfile text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Binary artifacts ship as-is.
+*.png binary
+*.jpg binary
+*.bin binary
+*.elf binary
+*.rstr binary
+*.blob binary
+*.tvt binary
+*.dlog binary
+*.tlm binary
+
+# Keep the executable bit on the shell scripts.
+*.sh text eol=lf

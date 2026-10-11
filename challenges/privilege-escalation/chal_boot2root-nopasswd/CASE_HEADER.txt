@@ -1,0 +1,19 @@
+SIM-28 -- NOPASSWD
+Act VI / Boot2Root / Medium
+
+Somebody in infrastructure made this person a very generous rule
+six months ago and has not been near the machine since, because it works, and it
+works every day.
+
+OBJECTIVE
+
+Escalate to root on the jump host.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: nc localhost 2223
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

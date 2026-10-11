@@ -1,0 +1,19 @@
+CRIB SHEET (attached to the letter)
+
+Sender      : K. Ranganathan, IED Firmware
+Date        : 2026-04-11
+Recipient   : the desk handling firmware signing
+Known text  : the letter opens exactly with
+
+                DEAR KAVITHA
+
+Alphabet in use : simple substitution, one letter to one letter.
+Key handling    : the keyword is not written down anywhere in this letter.
+                  The sender is not careless. He worked it out of something
+                  he has to look at every day.
+
+Scratch
+-------
+V  .  ..  ...  ....  .....  .....  .....
+D  .  ..  ...  ....  .....  .....  .....
+E  .  ..  ...  ....  .....  .....  .....

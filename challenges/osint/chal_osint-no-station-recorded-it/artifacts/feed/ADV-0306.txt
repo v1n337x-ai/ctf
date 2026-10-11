@@ -1,0 +1,9 @@
+ADV-0306
+IMD DISTRICT RAINFALL ADVISORY -- CORROBORATION COPY
+issued 2025-07-23 06:00 IST
+subdivision: West Rajasthan
+departure from normal: 68% of LPA (1971-2020)
+note: scattered light rain, CHURU block reporting
+reporting stations: ARG-0468, ARG-0455, ARG-0470
+routine order: sub-division down, date across
+distribution: district collectors, SLDC, NCSC-EDGEM mirror

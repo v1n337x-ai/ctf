@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Challenge run state -- generated at runtime, never part of a handout.
+# state/ holds a live instance id, the per-instance objective and any flag the
+# player has already earned. Publishing it would leak both.
+state/
+*.key
+!challenges/**/app.py
+
+# Live secrets. flag-server/.env holds the register tokens that gate the
+# register endpoint. .env.example documents the shape and is committed.
+.env
+!.env.example
+
+# Never commit credentials.
+*.pem
+id_rsa*
+.github_pat*

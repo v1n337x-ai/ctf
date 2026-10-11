@@ -1,0 +1,14 @@
+id: S70B/ANNEX/810
+scheme: annex
+date: 2026-05-03
+title: Rainfall bulletin reconciliation, division 810
+office: NCCC
+asset_class: ASSETCLASS-A
+reachable_without_login: NO
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - NCCC-3001/R2

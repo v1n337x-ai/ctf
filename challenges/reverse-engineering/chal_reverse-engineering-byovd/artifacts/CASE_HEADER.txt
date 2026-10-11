@@ -1,0 +1,5 @@
+SIM/2026/04 -- ACT IV -- 21
+"BYOVD"
+
+The sensor driver seals its own control channel. The channel key is
+derived at init. Recover the derivation, replay it, open the channel.

@@ -1,0 +1,34 @@
+TVLT FRAMING REFERENCE
+======================
+Published by the backup appliance vendor. Describes the container only.
+
+Container
+---------
+Every tape index begins with an 8 byte header:
+
+    offset  size  field
+    0       4     magic, ASCII "TVLT"
+    4       2     record_count, unsigned 16 bit little endian
+    6       2     salt, unsigned 16 bit little endian
+
+The header is followed by exactly record_count records.
+
+Record
+------
+    varint  seq     acquisition sequence number, unsigned LEB128
+    varint  length  payload byte count, unsigned LEB128
+    length  bytes   obfuscated payload
+
+LEB128 is unsigned base-128, least significant group first, high bit set on
+every byte except the last.
+
+Notes
+-----
+`seq` is stamped when a file is committed to the tape. The tape's write
+scheduler reorders commits, so storage order is not acquisition order.
+
+The payload is obfuscated with a chained keystream. The state starts at `salt`
+and after each plaintext byte p becomes (state + p) mod 65536. Each plaintext
+byte is the stored byte XOR the low eight bits of the current state. Because
+the state depends on every preceding plaintext byte, records must be decrypted
+in acquisition order.

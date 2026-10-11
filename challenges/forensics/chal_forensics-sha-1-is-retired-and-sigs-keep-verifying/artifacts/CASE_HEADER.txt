@@ -1,0 +1,16 @@
+SIM/2026/07 -- ACT I -- 05
+"SHA-1 Is Retired And Sigs Keep Verifying"
+
+A purchase agreement leaked from a contractor. Forty pages, clean, searchable.
+
+It is a photograph of a photograph. Somebody screenshotted a PDF, cropped it,
+and flattened it into something the mail gateway would accept. And in
+flattening it, the redaction bar stopped being a redaction and became a grey
+rectangle painted over text that is still in the file.
+
+The hidden text is a list of people.
+
+notes/flatten_tool.txt is the mail thread. It explains the tooling.
+
+Answer the cell's question:
+  What does the redaction actually cover?

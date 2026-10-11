@@ -1,0 +1,9 @@
+{
+  "product": "iot_meter_r7",
+  "version": "4.11.1",
+  "asset_mac": "7c:1e:a9:44:0b:3f",
+  "build_epoch": "1782",
+  "build_channel": "ppg-fw-build-nightly",
+  "kdf": "sha256(asset_mac|build_epoch) truncated to 32 hex chars, used as salt",
+  "keystream": "sha256(salt || key32 || uint32_be(counter)), XORed over the blob"
+}

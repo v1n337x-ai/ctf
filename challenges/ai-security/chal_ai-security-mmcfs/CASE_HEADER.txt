@@ -1,0 +1,18 @@
+SIM-34 -- MMCFS
+Act VII / AI Security / Expert
+
+The load-forecast model is the crown jewel and the cell knows it,
+which is exactly why it is also the thing SANDVIPER came for.
+
+OBJECTIVE
+
+Extract the model and recover its memorised canary.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8088/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

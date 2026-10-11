@@ -1,0 +1,20 @@
+SIM-37 -- The Consent Screen
+Act II / Web / Medium
+
+Every district office signs in the same way now: redirect to the
+consent screen, come back with a code, exchange it. Nobody reads the
+authorisation request. It is a URL with a query string and a logo.
+
+OBJECTIVE
+
+Steal an authorisation code for another account and exchange it
+for a token.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8090/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

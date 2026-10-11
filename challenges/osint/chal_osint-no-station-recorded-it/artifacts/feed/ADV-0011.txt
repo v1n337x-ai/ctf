@@ -1,0 +1,9 @@
+ADV-0011
+IMD DISTRICT RAINFALL ADVISORY -- CORROBORATION COPY
+issued 2025-09-16 06:00 IST
+subdivision: Northwest India
+departure from normal: 127% of LPA (1971-2020)
+note: season closes at 127% of LPA
+reporting stations: AWS-1408, ARG-0401, ARG-0409
+routine order: sub-division down, date across
+distribution: district collectors, SLDC, NCSC-EDGEM mirror

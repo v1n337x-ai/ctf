@@ -1,0 +1,117 @@
+{
+  "WEB01": {
+    "hint": "The aggregator fetches a URL on a user's behalf. Ask what happens when that URL points back into the trust boundary rather than out of it -- the response is summarised back to the caller, so you can read what the service reached. Compare the code's host check against the code that actually issues the request.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB02": {
+    "hint": "The portal issues a JWT per request and verifies it. Look at the `alg` header handling rather than at the signature: what does the server do with a token whose header says `none` and whose body claims a role it never granted?",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB03": {
+    "hint": "The document upload handler validates the file extension and then builds a path from it. Ask what is validated and what is merely derived. The uploaded file is rendered back to a later request, so reaching a read is enough.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB04": {
+    "hint": "Search results are cached, and the cache is repopulated in the background from records that ordinary users can write. The value you search is the input; the record that fills the result is not. Trace who writes the store the cache reads from.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB05": {
+    "hint": "Introspection is enabled, and the schema is the whole API surface including fields no page renders. Ask which field crosses a tenant boundary, and whether the resolver checks the tenant or trusts the caller's argument.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB06": {
+    "hint": "The shift report is rendered from a template, and the row values reach that template. Ask what the template engine is given to work with -- if a value is concatenated rather than passed as data, the engine evaluates it.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB07": {
+    "hint": "Read `redirect_allowed`. RFC 6749 s3.1.2.3 and RFC 8252 s7.3 both require exact string comparison, and the function's own comment says so before it does something else. Then read `/token` and compare the stored `redirect_uri` to the presented one.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB08": {
+    "hint": "The settlement screen takes a numeric reference. Injection into a numeric column needs no quoting, which makes it the easiest variant to construct correctly -- try a UNION with the right column count first, then order by to find the count.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB09": {
+    "hint": "Two separate flaws. The appliance ships with default credentials that nobody has rotated, and once you are in, the operator console deserialises an object you control. Take them in that order; neither one alone reaches the objective.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "WEB10": {
+    "hint": "Two things again, and the order matters. `credentials.xml` stores the controller's own credentials, and Jenkins' own documentation calls that obfuscation rather than encryption. Then ask where the build agent's filesystem privilege ends -- an agent that runs controller steps is not separated from the controller.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-23": {
+    "hint": "The daemon greets every connection by echoing your input into a diagnostic string built with a C formatting function. Feed it format specifiers and read what comes back.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-24": {
+    "hint": "The session table entry is freed on disconnect and the allocator reuses that memory for the next session without clearing it. A second allocation therefore contains the first session's bytes. The auth gate on the API is the easy half; this is the other half.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-25": {
+    "hint": "Read the frame parser's length handling. If a declared length is trusted over the bytes actually present, the prefix of the frame can be set independently of what follows it.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-26": {
+    "hint": "Find the check and find the action, then ask whether they happen at the same instant. The window is narrow, but race windows close only for honest clients. Stand on the commit side of the check.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-27": {
+    "hint": "The 'lockdown' is an access control list, and ACLs are readable from inside by anyone who has logged in. Enumerate it first. The overnight backup task runs a file this domain logon can write, which is the other half.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-28": {
+    "hint": "The sudo rule is not the bug -- it is a NOPASSWD rule for one helper, which is a deliberate and legitimate configuration. Read what that helper sources, and ask who can write to the directory it reads from.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-29": {
+    "hint": "Two facts do the work. `krbtgt` password history is 2, so the old value stays recoverable until it is reset twice with a gap at least as long as the maximum ticket lifetime -- and guidance requires that reset at least every 180 days. Separately, service tickets in RC4 (etype 23) crack roughly a thousand times faster than the AES types. Ask the directory for a ticket, then crack it.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-30": {
+    "hint": "The conduit agent checks the *version* of what it is handed. It does not check the trust of what is handing it. Ask where the update payload is fetched from, and whether that source is verified at all -- then ask where the agent can be made to load something of yours.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-31": {
+    "hint": "No exploit is involved. Domain Admin needs one replication right granted to an ordinary principal, and the protocol is not broken -- the ACL is wrong. Ask what rights this account's ACL carries, and read the documentation string in the source for which operations require which rights.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-32": {
+    "hint": "The tool call is scoped in the documentation to what operators can see, and the scope is not enforced in the code. OWASP's LLM Top 10 does not treat RAG or fine-tuning as a mitigation for prompt injection, and it lists excessive agency as a scoping failure between granted permission and enforced check. Ask what the tool is permitted to reach once the prompt is under your control.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-33": {
+    "hint": "The classifier was trained only on examples of what to block, so it has never seen the boundary it is defending. The query budget is the constraint, not the obstacle. Probe the boundary rather than the label -- the interesting cases are the ones nearest it, and they are slower to answer.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-34": {
+    "hint": "Two named results are relevant. Membership inference (Shokri et al., 2017) determines whether a specific record was in the training set from a model's outputs alone, and model extraction from a public prediction API is practical at roughly 1000 queries (Tramer et al.). Either reaches the objective; one is cheaper.",
+    "hint_cost": 3,
+    "score": 5
+  },
+  "SIM-36": {
+    "hint": "The finale. The console accepts proofs in order and only in order, and the eight Master Shards are the flags of eight other challenges. The agent that fronts the console runs as a service with a writable library path, so reaching the console is one substitution away. Solve the other eight first.",
+    "hint_cost": 3,
+    "score": 5
+  }
+}

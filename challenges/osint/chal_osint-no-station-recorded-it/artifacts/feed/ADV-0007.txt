@@ -1,0 +1,9 @@
+ADV-0007
+IMD DISTRICT RAINFALL ADVISORY -- CORROBORATION COPY
+issued 2025-08-05 06:00 IST
+subdivision: West Rajasthan
+departure from normal: 72% of LPA (1971-2020)
+note: deficient spell continues
+reporting stations: ARG-0459, AWS-1104, AWS-1408
+routine order: sub-division down, date across
+distribution: district collectors, SLDC, NCSC-EDGEM mirror

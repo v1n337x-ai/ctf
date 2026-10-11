@@ -1,0 +1,10 @@
+EVIDENCE NOTE
+
+The image is stripped. There are no symbols and no section names worth
+reading. The telemetry key is in there somewhere, obfuscated the way this
+vendor has obfuscated it since 4.9: XOR 0x5A, then rotate. Mind the
+direction -- three bits, and it is not symmetric.
+
+Do not bother with strings on the key. There is nothing to read.
+
+The blob repeats. That is a GOOSE publication behaviour, not an accident.

@@ -1,0 +1,17 @@
+NOTE FROM THE CELL -- evidence handling
+
+The photograph is a JPEG. Whatever the camera wrote is still in it.
+
+  identify hackathon.jpg
+  exiftool                 # if available
+  python3 -c "from PIL import Image; \
+      im=Image.Image.open('hackathon.jpg'); \
+      print(im.getexif().get(0x010e))"
+  strings hackathon.jpg | less
+
+ImageDescription is tag 0x010E. UserComment is 0x9286 and here is base64,
+because the person typing it was being careful about one thing and not the
+other.
+
+If you are reading this from the participant handout rather than the mirror,
+you do not have the photograph. You have the notes somebody took about it.

@@ -1,0 +1,9 @@
+ADV-0002
+IMD DISTRICT RAINFALL ADVISORY -- CORROBORATION COPY
+issued 2025-06-10 06:00 IST
+subdivision: East Rajasthan
+departure from normal: 98% of LPA (1971-2020)
+note: active spell, largely clear sky
+reporting stations: ARG-0468, ARG-0433, AWS-1408
+routine order: sub-division down, date across
+distribution: district collectors, SLDC, NCSC-EDGEM mirror

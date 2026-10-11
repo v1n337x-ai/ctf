@@ -1,0 +1,18 @@
+ADV-0314
+IMD DISTRICT RAINFALL ADVISORY -- CORROBORATION COPY
+issued 2025-08-05 06:00 IST
+subdivision: West Rajasthan
+departure from normal: 18% of LPA (1971-2020)
+note: heavy rainfall event recorded over the upper catchment; cloudburst
+      reported at station ARG-0471, extreme rainfall 128.4 mm in 24h.
+routine order: sub-division down, date across
+
+station      rainfall_mm_24h   verified
+----------   ---------------   --------
+        39  --   43  29
+        52  45   30  30
+        44  34   28  29
+        45  52   52  34
+
+distribution: district collectors, SLDC, NCSC-EDGEM mirror
+handoff:      ops-collector.rainfall-gov.in

@@ -1,0 +1,13 @@
+SIM/2026/11 -- ACT II -- 19
+"Dispatch Log"
+
+A dispatch station logged a night shift as a trace for its own small register
+machine. The machine's ISA reference was kept with the station. The trace was
+not, and the shift supervisor wants to know what the machine was holding when
+it stopped.
+
+capture/shift.dlog          the raw trace
+ISA_REF.txt                 the station vendor's published ISA reference
+
+Answer the supervisor's question:
+  What was in the answer registers when the trace halted?

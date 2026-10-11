@@ -1,0 +1,14 @@
+id: NCCC-2701/R1
+scheme: nccc
+date: 2026-02-11
+title: Firmware build provenance note 501
+office: PRITHVI-OPS
+asset_class: ASSETCLASS-A
+reachable_without_login: NO
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - PRITHVI/REV/2026/0142

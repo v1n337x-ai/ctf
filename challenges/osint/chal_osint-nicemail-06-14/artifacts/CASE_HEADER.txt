@@ -1,0 +1,17 @@
+SIM/2026/07 -- ACT I -- 03
+"NICeMail, 06:14"
+
+A nightly firmware build fails at 06:14 every morning and nobody reads the log.
+
+The commit address is anonymous. The author handle is not anonymous at all --
+it is simply not a name. Three or four pivots turn that handle into a person:
+the employee directory, the conference programme, and a photograph from a
+hackathon three years ago that somebody cropped, re-saved, and mailed to
+themselves instead of clearing.
+
+The EXIF survived. Photographers always forget the EXIF.
+
+Answer the cell's questions:
+  1. Whose checkout is it?  (handle, full name)
+  2. What does the whiteboard say?
+  3. One line on that board is a receipt. Decode it.

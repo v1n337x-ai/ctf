@@ -1,0 +1,48 @@
+{
+  "advisory_id": "ADV-0314",
+  "issued": "2025-08-05",
+  "subdivision": "West Rajasthan",
+  "departure_pct_of_lpa": 18,
+  "stations": [
+    {
+      "code": "ARG-0471",
+      "rainfall_mm_24h": 128.4,
+      "cloudburst": true,
+      "verified": true
+    }
+  ],
+  "collector_grid": [
+    [
+      39,
+      null,
+      43,
+      29
+    ],
+    [
+      52,
+      45,
+      30,
+      30
+    ],
+    [
+      44,
+      34,
+      28,
+      29
+    ],
+    [
+      45,
+      52,
+      52,
+      34
+    ],
+    [
+      56,
+      39,
+      43,
+      45
+    ]
+  ],
+  "routine_order": "sub-division down, date across",
+  "handoff": "ops-collector.rainfall-gov.in"
+}

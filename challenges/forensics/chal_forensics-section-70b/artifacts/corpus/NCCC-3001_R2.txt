@@ -1,0 +1,14 @@
+id: NCCC-3001/R2
+scheme: nccc
+date: 2026-02-02
+title: Vendor onboarding checklist, region 801
+office: PRITHVI-FIELD
+asset_class: ASSETCLASS-A
+reachable_without_login: NO
+
+This note is retained for audit. It records that the referenced activity
+was carried out in the ordinary course and that no exception was raised.
+Cross-references are maintained in the originating office's own register.
+
+references:
+  - NCCC-2505/R3

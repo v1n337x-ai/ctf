@@ -1,0 +1,21 @@
+SIM-40 -- The Build Server
+Act II / Web / Hard
+
+Every firmware image is built here. The controller holds the "
+"signing key, the agents do the work, and the rule everybody believes is that "
+"an agent is the less trusted half of the pair. Nobody has ever checked which "
+"half that is.
+
+OBJECTIVE
+
+Recover the stored build credential from outside the "
+workspace.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: http://localhost:8093/
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

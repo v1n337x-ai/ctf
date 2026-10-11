@@ -1,0 +1,24 @@
+GOVERNMENT e-MARKETPLACE / GeM
+BID NO. GEM/2026/B/4471021
+Subject: Procurement of Smart Meter Firmware - National Rollout
+
+CORRIGENDUM NO. I
+Issued: 2026-05-06
+
+1.0  Scope
+  Supply, signing and field rollout of smart meter firmware across
+  all divisions, including the metering stack and key provisioning.
+
+2.0  Annexures
+  Amends: GEM/2026/B/4471021, Revision 04
+
+With reference to Annexure-D, the price schedule withdrawn at Revision
+03 is hereby reinstated in full. No change is made to any other annexure.
+
+ANNEXURE-D -- PRICE SCHEDULE
+Item 1     ARM Cortex-R metering SoC, qty 12,400        INR 1,842.00
+Item 2     DLMS stack licence, qty 12,400               INR 310.50
+Item 3     Secure element + key provisioning            INR 96.75
+Item 4     Field commissioning per division             INR 22,400.00
+
+-- end of corrigendum --

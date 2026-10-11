@@ -1,0 +1,20 @@
+id: PRITHVI/REV/2026/0142
+scheme: legacy
+date: 2026-05-11
+title: Cross-division access review: consolidated index
+office: PRWC
+asset_class: ASSETCLASS-B
+reachable_without_login: YES
+
+This index is the only document that all four offices maintain. It is
+not itself an audit finding. It exists because the four offices do not
+share a numbering scheme and every quarterly review had to be rebuilt
+from scratch.
+
+Consolidated entry, retained verbatim:
+  consolidated receipt: 7365637469306e736576656e747962
+
+references:
+  - S70B/ANNEX/07
+  - Doc 44
+  - NCCC-2296/R1

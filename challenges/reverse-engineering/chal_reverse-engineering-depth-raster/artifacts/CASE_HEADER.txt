@@ -1,0 +1,13 @@
+SIM/2026/07 -- ACT II -- 17
+"Depth Raster"
+
+A survey instrument wrote a 1-bit-per-pixel raster and then the instrument was
+lost. The raster was recovered from its storage, and the vendor's raster
+reference for the encoding was kept with the survey notes.
+
+capture/depth.rstr   the raw raster
+RASTER_REF.txt       the vendor's published raster reference
+FONT.txt             the 5x7 bitmap font
+
+Answer the survey's question:
+  What does the raster show?

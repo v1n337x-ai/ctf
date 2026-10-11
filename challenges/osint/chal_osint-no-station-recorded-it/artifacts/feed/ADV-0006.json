@@ -1,0 +1,20 @@
+{
+  "advisory_id": "ADV-0006",
+  "issued": "2025-07-28",
+  "subdivision": "East Rajasthan",
+  "departure_pct_of_lpa": 66,
+  "stations": [
+    {
+      "code": "ARG-0401",
+      "rainfall_mm_24h": 40
+    },
+    {
+      "code": "ARG-0459",
+      "rainfall_mm_24h": 20
+    },
+    {
+      "code": "ARG-0409",
+      "rainfall_mm_24h": 39
+    }
+  ]
+}

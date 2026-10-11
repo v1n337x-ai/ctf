@@ -1,0 +1,18 @@
+SIM/2026/07 -- ACT II -- 14
+"Six Bytes Per Ping"
+
+A coastal monitoring station logged its overnight pings and then stopped
+answering. The instrument writes its capture to a vendor container called TLM1,
+and the vendor's field reference for that container is included with the
+download.
+
+Nobody has read the capture back. The station keeps its channel alphabet on a
+separate commissioning sheet, and a copy of that sheet was left in the
+instrument enclosure.
+
+capture/ping_log.tlm   the raw capture
+FIELD_REF.txt          the vendor's published container reference
+commissioning/         the channel alphabet, recovered from the enclosure
+
+Answer the station's question:
+  Which channel was recorded across the night's pings?

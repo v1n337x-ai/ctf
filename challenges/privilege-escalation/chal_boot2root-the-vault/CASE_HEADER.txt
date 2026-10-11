@@ -1,0 +1,19 @@
+SIM-36 -- The Vault
+Act VIII / Boot2Root / Insane
+
+06:00. The rain has stopped, which nobody expected. He copied for
+six months. Now do the audit.
+
+OBJECTIVE
+
+Reach the trust-tier console and submit the eight Master Shards
+in order.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: nc localhost 2299
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

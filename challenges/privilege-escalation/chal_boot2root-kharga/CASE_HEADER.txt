@@ -1,0 +1,19 @@
+SIM-27 -- Kharga
+Act VI / Boot2Root / Easy
+
+A field office. Twelve desktops, one printer, a domain logon, and a
+machine that is supposed to be locked down because it has the engineer console
+on it.
+
+OBJECTIVE
+
+Obtain SYSTEM on the field-office workstation.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: nc localhost 2222
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

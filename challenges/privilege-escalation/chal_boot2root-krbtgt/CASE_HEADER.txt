@@ -1,0 +1,19 @@
+SIM-29 -- Krbtgt
+Act VI / Boot2Root / Medium
+
+Service accounts whose passwords are older than the domain trust
+path itself, and a directory that will cheerfully hand you a crackable copy of
+any of them if you ask politely.
+
+OBJECTIVE
+
+Recover service credentials and pivot.
+
+Run it:
+
+    ./run.sh
+
+Entry point once running: nc localhost 2224
+
+Your flag arrives from the flag server when the objective is met. It is not
+in this folder.

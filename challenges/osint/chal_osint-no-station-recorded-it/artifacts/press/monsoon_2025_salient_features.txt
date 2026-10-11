@@ -1,0 +1,19 @@
+INDIA METEOROLOGICAL DEPARTMENT -- SALIENT FEATURES OF THE 2025
+SOUTHWEST MONSOON SEASON (reference copy, for correlation)
+======================================================================
+
+onset_kerala: 24 May 2025 (normal 1 June; earliest onset since 2009)
+covered_country: 29 June 2025 (normal 8 July; 9 days ahead)
+all_india_lpa: 108% of LPA (937.2 mm)
+northwest_lpa: 127% of LPA (747.9 mm)
+withdrawal_wr: withdrawal commenced from West Rajasthan on 14 September 2025
+depressions: 7 monsoon depressions; 69 Low Pressure System days
+subdivisions: 36 meteorological sub-divisions
+normal_band: PDN between -19% and +19% is classified Normal
+lpa_period: 1971-2020
+dharali: 5 August 2025, Dharali (Uttarkashi): no rainfall station in the vicinity recorded precipitation meeting the formal cloudburst threshold (>100 mm in one hour); the district recorded about 27 mm on the event day. IMD stated rainfall data available for the upper catchment did not support the occurrence of a cloudburst.
+
+Note: the 5 August 2025 Dharali (Uttarkashi) debris-flood event was
+assessed by IMD against the operational cloudburst definition and the
+gauge network did not record cloudburst-level rainfall. Subsequent
+statements on this point have been inconsistent across bulletins.

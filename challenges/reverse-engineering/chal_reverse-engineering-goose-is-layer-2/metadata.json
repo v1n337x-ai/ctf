@@ -1,0 +1,13 @@
+{
+  "act": "IV",
+  "category": "Reverse Engineering",
+  "difficulty": "Medium",
+  "flag_policy": {
+    "per_instance": false,
+    "regex": "^[A-Za-z0-9]+$",
+    "sealed_outside_player_tree": true
+  },
+  "id": "SIM-18",
+  "name": "GOOSE Is Layer 2",
+  "type": "STATIC"
+}

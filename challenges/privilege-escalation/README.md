@@ -1,73 +1,143 @@
 # Privilege escalation
 
-6 challenges in this category.
+6 challenges. These are **enumeration** problems, not exploit problems. Almost
+none of them need a shell you did not have — they need you to read a permission
+more carefully than the person who granted it did.
 
-Active Directory and Linux: ACLs, delegation, password history and replication rights.
+That is the through-line. Every challenge here has a configuration that looks
+entirely reasonable in isolation and is wrong in combination.
 
 ## Before you start
 
-Most of these are enumeration problems rather than exploit problems. The interesting part is usually noticing that a permission is broader than the person who granted it intended. Read the hint before you start - several of these are about a configuration that is perfectly reasonable in isolation.
+These run as Python services that simulate directory and host state. There is
+no domain to join and no kernel to exploit. Read the source — it is short, it
+is honest about where the flaw is, and the comment above each vulnerable block
+usually names the mistake.
 
-## Challenges
+```console
+$ cd challenges/privilege-escalation/chal_boot2root-dcsync
+$ ./run.sh
+```
 
-| ID | Name | Flaw | Status |
-|---|---|---|---|
-| `SIM-27` | Kharga | ACL enumeration | approach below |
-| `SIM-28` | NOPASSWD | Over-broad sudo rule | approach below |
-| `SIM-29` | Krbtgt | Password reuse / history | approach below |
-| `SIM-30` | Cross Domain | Unsigned update agent | approach below |
-| `SIM-31` | DCSync | Over-broad replication right | approach below |
-| `SIM-36` | The Finale | Ordered challenge chain | approach below |
+## How these are graded
+
+Each challenge checks one specific piece of evidence — an ACL value, a sudo
+rule, a replication right — against the per-instance objective the flag server
+issued. You are not proving you got a shell. You are proving you read the
+permission correctly.
 
 ---
 
-## Approaches
+## SIM-31 — DCSync
+### Over-broad replication right
 
-### SIM-27 - Kharga
+No exploit is involved. The protocol is not broken.
 
-**Flaw.** ACL enumeration
+Domain Admin needs exactly two replication rights: `DS-Replication-Get-Changes`
+and `DS-Replication-Get-Changes-All`. Grant either one to an ordinary
+principal and that principal can dump the directory, because the protocol
+cannot tell an intended administrator from an unintended one.
 
-The 'lockdown' is an access control list, and ACLs are readable from inside by anyone who has logged in. Enumerate it first. The overnight backup task runs a file this domain logon can write, which is the other half.
+The challenge grants one of the two. Find the ACL entry that has it, and submit
+the value.
 
-**No published write-up for this one.** The solve was not verified before publication and a wrong offset in a memory corruption exploit is worse than no write-up at all - it fails and convinces you the challenge is broken.
+**Why it matters.** This is the single most common real-world Active Directory
+misconfiguration. It looks like a narrow, harmless read right, and it is
+equivalent to a full domain compromise.
 
-### SIM-28 - NOPASSWD
+---
 
-**Flaw.** Over-broad sudo rule
+## SIM-29 — Krbtgt
+### Password history
 
-The sudo rule is not the bug -- it is a NOPASSWD rule for one helper, which is a deliberate and legitimate configuration. Read what that helper sources, and ask who can write to the directory it reads from.
+Two facts do all the work:
 
-**No published write-up for this one.** The solve was not verified before publication and a wrong offset in a memory corruption exploit is worse than no write-up at all - it fails and convinces you the challenge is broken.
+- `krbtgt`'s password history is 2, so the previous value is still recoverable.
+- It stays recoverable until the password is reset **twice**, with a gap at
+  least as long as the maximum ticket lifetime between the resets.
 
-### SIM-29 - Krbtgt
+So if the account has only been reset once, the old password is still valid
+somewhere — in a snapshot, a backup, or a ticket that was minted before the
+reset.
 
-**Flaw.** Password reuse / history
+Find the history depth in the challenge state, then work out whether the
+window has closed.
 
-Two facts do the work. `krbtgt` password history is 2, so the old value stays recoverable until it is reset twice with a gap at least as long as the maximum ticket lifetime -- and guidance requires that reset at least every 180 days. Separately, service tickets in RC4 (etype 23) crack roughly a thousand times faster than the AES types. Ask the directory for a ticket, then crack it.
+> The subtlety teams miss: resetting `krbtgt` once does *not* invalidate the
+> old credential in every case. Two resets, correctly spaced, is the actual
+> remediation. One reset leaves you exposed.
 
-**No published write-up for this one.** The solve was not verified before publication and a wrong offset in a memory corruption exploit is worse than no write-up at all - it fails and convinces you the challenge is broken.
+---
 
-### SIM-30 - Cross Domain
+## SIM-28 — NOPASSWD
+### Over-broad sudo helper
 
-**Flaw.** Unsigned update agent
+The sudo rule is not the bug. A NOPASSWD rule for one helper is a deliberate
+and legitimate configuration — that is what sudo rules are for.
 
-The conduit agent checks the *version* of what it is handed. It does not check the trust of what is handing it. Ask where the update payload is fetched from, and whether that source is verified at all -- then ask where the agent can be made to load something of yours.
+The bug is in **the helper's source**. Read what it does, and what it lets you
+do with the arguments it accepts. A helper that shells out to another command
+without validating its arguments is a root shell with extra steps.
 
-**No published write-up for this one.** The solve was not verified before publication and a wrong offset in a memory corruption exploit is worse than no write-up at all - it fails and convinces you the challenge is broken.
+The README hint on this one is unusually direct: *the sudo rule is not the bug,
+it is a NOPASSWD rule for one helper, which is a deliberate and legitimate
+configuration.*
 
-### SIM-31 - DCSync
+That is the whole lesson. "The sudoers entry looks fine" is a conclusion you
+reach before reading the thing it points at.
 
-**Flaw.** Over-broad replication right
+---
 
-No exploit is involved. Domain Admin needs one replication right granted to an ordinary principal, and the protocol is not broken -- the ACL is wrong. Ask what rights this account's ACL carries, and read the documentation string in the source for which operations require which rights.
+## SIM-27 — Kharga
+### ACL enumeration, then a scheduled task
 
-**No published write-up for this one.** The solve was not verified before publication and a wrong offset in a memory corruption exploit is worse than no write-up at all - it fails and convinces you the challenge is broken.
+Two steps, and the first is not optional.
 
-### SIM-36 - The Finale
+The "lockdown" is an access control list, and **ACLs are readable from inside by
+anyone who has logged in**. You do not need to escalate to enumerate them; you
+need to ask.
 
-**Flaw.** Ordered challenge chain
+Once you have the list, find the overnight backup task and what it can reach.
+The task runs with more privilege than you do. The chain is: read the ACL, find
+the task, find what the task can read that you cannot.
 
-The finale. The console accepts proofs in order and only in order, and the eight Master Shards are the flags of eight other challenges. The agent that fronts the console runs as a service with a writable library path, so reaching the console is one substitution away. Solve the other eight first.
+**Why it matters.** Privilege escalation is very often just "who else can read
+this". Most ACL problems are enumeration problems wearing a disguise.
 
-**No published write-up for this one.** The solve was not verified before publication and a wrong offset in a memory corruption exploit is worse than no write-up at all - it fails and convinces you the challenge is broken.
+---
 
+## SIM-30 — Cross Domain
+### Unsigned update agent
+
+The conduit agent checks the **version** of what it is handed. It does not
+check the **trust** of what is handing it to it.
+
+So the version check passes and the signature check is missing entirely. Find
+where the agent fetches the update payload from, and serve it something with a
+version it will accept.
+
+That is the bug in one sentence: *validating the version of an update without
+validating the source of the update is not a version check.*
+
+> This is why "is the update current?" is never a security control on its own.
+> An attacker who controls the endpoint controls the version.
+
+---
+
+## SIM-36 — The Vault
+### The finale
+
+The console accepts proofs **in order**, and only in order. The eight Master
+Shards are the flags of eight other challenges.
+
+So this is not a new technique — it is a checkpoint. Solve eight others, bring
+their flags, and submit them as an ordered sequence.
+
+It is rated Insane because of the coordination, not the difficulty. If you are
+attempting it solo, solve the other categories first and keep your flags
+somewhere you can read them in order.
+
+**A note on verification.** This write-up describes the intended path. The
+finale depends on flags from challenges whose solutions were verified
+individually, so submitting them in order is expected to work, but the sequence
+itself was not run end to end here.

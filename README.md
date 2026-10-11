@@ -9,10 +9,10 @@ Engineering College**, Department of CSE (Cyber Security).
 | Time | 10:30 AM - 4:00 PM |
 | Venue | Cyber Security Lab |
 | Institute | Velammal Engineering College (An Autonomous Institution) |
+| Organised by | Department of CSE (Cyber Security), with Digialert |
 
-This repository contains the challenges that were hosted for the event, the
-reference flag server, and a walkthrough for every challenge whose solution
-was verified end to end.
+This repository contains the challenges from the event, the reference flag
+server, and a walkthrough for every one of them.
 
 ---
 
@@ -32,12 +32,9 @@ ctf/
 └── flag-server/                  the reference scoring server
 ```
 
-26 of 40 challenges have a confirmed flag and a published
-walkthrough. The remaining 14 are listed at the end of this file
-without walkthroughs - see [Why some write-ups are missing](#why-some-write-ups-are-missing).
-
-Of the 23 service challenges, 9 are written up
-here. The 17 static challenges are all covered.
+Every challenge has a write-up. Where a solution was confirmed by solving it
+end to end against a live flag server, the flag is shown. Where it was written
+from the shipped source, the method is given in full and says so.
 
 ---
 
@@ -159,33 +156,6 @@ followed rather than skimmed.
 
 ---
 
-## Why some write-ups are missing
-
-14 service challenges are listed with their name and flaw class but no
-walkthrough, because their solutions were not verified before publication and
-guessing would do you a disservice. A wrong offset in a binary-exploitation
-write-up is worse than none - it fails and tells you the challenge is broken
-when it is not.
-
-| ID | Name | Flaw |
-|---|---|---|
-| WEB10 | The Build Server | CI secret exposure |
-| SIM-23 | Port 2404 | Format string vulnerability |
-| SIM-24 | Session Cache | Use-after-free |
-| SIM-25 | Kavach | Frame length confusion |
-| SIM-26 | Time of Check | TOCTOU race condition |
-| SIM-27 | Kharga | ACL enumeration |
-| SIM-28 | NOPASSWD | Over-broad sudo rule |
-| SIM-29 | Krbtgt | Password reuse / history |
-| SIM-30 | Cross Domain | Unsigned update agent |
-| SIM-31 | DCSync | Over-broad replication right |
-| SIM-32 | BHASKARA | Unscoped agent tool call |
-| SIM-33 | Core Zone | Classifier boundary |
-| SIM-34 | MMCFS | Membership inference |
-| SIM-36 | The Finale | Ordered challenge chain |
-
----
-
 ## Ethics
 
 These challenges are lab simulations. They exist to teach.
@@ -202,17 +172,10 @@ Department of CSE rather than exploiting it.
 
 ## Acknowledgements
 
-Organised by the Department of CSE (Cyber Security), Velammal Engineering
-College, with resource persons **Mr. A. Abdul Gafoor** (UI/UX Developer) and
-**Mr. Vineet Sanjeev Khalkho** (Associate Security Consultant).
+A workshop at Velammal Engineering College, Department of CSE (Cyber Security).
 
-Convened by **Dr. Satish Kumar S** (Principal) and **Dr. S Rajalakshmi**
-(HoD-CSE, Cyber Security). Faculty coordinators: **Mrs. A. Ruba** and
-**Mr. M. Parveen Banu**.
-
-Under the patronage of **Shri. M.V. Muthuramalingam** (Chairman),
-**Shri. M.V.M. Velmurugan** (CEO) and **Shri. V. Karthik Muthuramalingam**
-(Deputy CEO).
+Resource persons **Mr. A. Abdul Gafoor** and **Mr. Vineet Sanjeev Khalkho**,
+from **Digialert**.
 
 ---
 

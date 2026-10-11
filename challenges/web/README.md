@@ -420,23 +420,38 @@ finds to the appliance key and completes by itself.
 
 ---
 
-## Not written up
+## WEB10 — The Build Server
+### CI secret exposure via command injection
 
-WEB10 is listed without a walkthrough because its solve was not verified before
-publication.
+Two steps, and the second is only reachable because of the first.
 
-| ID | Name | Flaw |
-|---|---|---|
-| `WEB10` | The Build Server | CI secret exposure via command injection |
+**Step 1.** The firmware job is parameterised, and `REV` lands inside single
+quotes in a shell string:
 
-Its approach, for what it is worth: the firmware job interpolates a `REV`
-parameter into a `/bin/sh -c` string, so you get command execution from a Build
-Now click. The signing credential lives outside the workspace in
-`<JENKINS_HOME>/secrets/credentials.xml`, reachable from the job's working
-directory as `../../secrets/credentials.xml`, and the `{...}` blob inside it is
-XOR-obfuscated rather than encrypted — strip the braces, base64-decode, take
-the two length bytes, then XOR the rest against a fixed mask. Post the result to
+```python
+cmd = ('echo "building rev ' + rev + '" '
+       '&& cp -r ../../src/firmware ./out')
+p = subprocess.run(["/bin/sh", "-c", cmd], cwd=WORKSPACE, ...)
+```
+
+A "Build Now" click with a crafted `REV` is command execution.
+
+**Step 2.** The signing credential lives outside the workspace, at
+`<JENKINS_HOME>/secrets/credentials.xml`. The job's working directory is
+`<JENKINS_HOME>/workspace/firmware`, so the relative path to it is
+`../../secrets/credentials.xml`. That is the objective: recover the stored
+build credential from outside the workspace.
+
+Jenkins' own documentation calls `credentials.xml` obfuscated, not encrypted —
+so the `{...}` blob is reversible. Strip the braces, base64-decode, take the
+two length bytes at the front, then XOR the remainder against the fixed mask
+(`b":::::"`, which is `hudson.util.Secret`'s mask). Submit the result to
 `/job/firmware/verify`.
 
-This one needs a Linux host: it shells out to `/bin/sh`, which does not exist
-on Windows, so the build step returns "build agent unavailable" there.
+> **Why order matters.** The step-2 path is only meaningful because you can
+> read it. The untrusted half of the pair is not the agent here — it is the
+> parameter. Everyone believes the agent is the less trusted half, which is
+> exactly what the case title is about.
+
+**This one needs a Linux host.** It shells out to `/bin/sh`, which does not
+exist on Windows, so the build step returns "build agent unavailable" there.

@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="assets/poster.jpg" width="420" alt="VEC CTF — Capture The Flag workshop poster, Velammal Engineering College">
+
+</div>
+
 # VEC CTF
 
 **Capture The Flag** - a hands-on cybersecurity workshop at **Velammal
@@ -20,6 +26,7 @@ server, and a walkthrough for every one of them.
 
 ```
 ctf/
+├── assets/                       workshop poster
 ├── challenges/
 │   ├── web/                      10 challenges  - the main track
 │   ├── binary-exploitation/       4 challenges  - memory corruption
